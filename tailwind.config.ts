@@ -100,6 +100,11 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "wave-avatar": {
+          "0%, 100%": { transform: "rotate(0deg) scale(1)" },
+          "25%": { transform: "rotate(-5deg) scale(1.03)" },
+          "75%": { transform: "rotate(5deg) scale(1.03)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +115,7 @@ export default {
         "slide-in-right": "slide-in-right 0.7s ease-out forwards",
         "scale-up": "scale-up 0.5s ease-out forwards",
         float: "float 3s ease-in-out infinite",
+        "wave-avatar": "wave-avatar 2.5s ease-in-out infinite",
       },
     },
   },
