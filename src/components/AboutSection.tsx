@@ -30,8 +30,8 @@ export default function AboutSection() {
                 <p className="text-xs text-muted-foreground">Aug 2022 – Jul 2024</p>
               </div>
               <div>
-                <p className="font-medium">B.E.</p>
-                <p className="text-sm text-muted-foreground">Dayananda Sagar Academy • CGPA: 9.2</p>
+                <p className="font-medium">B.E, Computer Science and Engineering</p>
+                <p className="text-sm text-muted-foreground">Dayananda Sagar Academy of Technology • CGPA: 9.2</p>
                 <p className="text-xs text-muted-foreground">Jun 2018 – Jul 2022</p>
               </div>
             </div>
