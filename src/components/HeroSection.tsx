@@ -1,4 +1,5 @@
 import { ArrowDown, Mail, Linkedin, Github } from "lucide-react";
+import avatarWave from "@/assets/avatar-wave.png";
 
 export default function HeroSection() {
   return (
@@ -13,6 +14,18 @@ export default function HeroSection() {
         <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium animate-fade-up">
           Full Stack Developer
         </div>
+
+        {/* Avatar */}
+        <div className="flex justify-center mb-6 animate-fade-up" style={{ animationDelay: "0.05s" }}>
+          <img
+            src={avatarWave}
+            alt="Srilakshmi Bhat avatar waving hello"
+            width={160}
+            height={160}
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/20 shadow-lg animate-wave-avatar"
+          />
+        </div>
+
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           Hi, I'm{" "}
           <span className="text-gradient">Srilakshmi Bhat</span>
