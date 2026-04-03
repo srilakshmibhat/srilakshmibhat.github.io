@@ -12,20 +12,20 @@ const projects = [
     github: null,
   },
   {
+    icon: Tv,
+    title: "WatchParty App",
+    tech: ["React", "Node.js", "WebSocket", "AWS"],
+    description:
+    "Real-time watch-together application where users can create a party and watch synchronized video with live chat functionality.",
+    github: "https://github.com/srilakshmibhat/WatchParty",
+  },
+  {
     icon: HeartPulse,
     title: "Covid Management System",
     tech: ["React", "Spring Boot", "MySQL", "AWS"],
     description:
       "Full stack healthcare platform for booking tests, vaccinations, and managing patient workflows. Implemented admin features for hospitals, billing, and quarantine centers.",
     github: "https://github.com/srilakshmibhat/CovidCare-Covid-Mgmt-System",
-  },
-  {
-    icon: Tv,
-    title: "WatchParty App",
-    tech: ["React", "Node.js", "WebSocket", "AWS"],
-    description:
-      "Real-time watch-together application where users can create a party and watch synchronized video with live chat functionality.",
-    github: "https://github.com/srilakshmibhat/WatchParty",
   },
 ];
 
