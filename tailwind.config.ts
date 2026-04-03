@@ -115,6 +115,7 @@ export default {
         "slide-in-right": "slide-in-right 0.7s ease-out forwards",
         "scale-up": "scale-up 0.5s ease-out forwards",
         float: "float 3s ease-in-out infinite",
+        "wave-avatar": "wave-avatar 2.5s ease-in-out infinite",
       },
     },
   },
