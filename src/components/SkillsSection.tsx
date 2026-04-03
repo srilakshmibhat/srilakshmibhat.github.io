@@ -15,7 +15,7 @@ const categories = [
   {
     icon: Server,
     title: "Backend",
-    skills: ["Node.js", "Express.js", "Nest.js", "Spring Boot"],
+    skills: ["Node.js", "Express.js", "Nest.js", "Java", "Spring Boot"],
   },
   {
     icon: Database,
