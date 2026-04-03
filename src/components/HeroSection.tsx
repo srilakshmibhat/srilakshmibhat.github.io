@@ -10,7 +10,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium animate-fade-up">
+        <div className="inline-block mb-6 px-6 py-2.5 rounded-full bg-primary/10 text-primary text-base font-medium animate-fade-up">
           Full Stack Developer
         </div>
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
