@@ -6,13 +6,15 @@ import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 import { useTheme } from "@/hooks/useTheme";
 
 const Index = () => {
   const { isDark, toggle } = useTheme();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen cursor-none md:cursor-none">
+      <CustomCursor />
       <Navbar isDark={isDark} toggle={toggle} />
       <HeroSection />
       <AboutSection />
