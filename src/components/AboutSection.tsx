@@ -10,9 +10,11 @@ export default function AboutSection() {
         <h2 className={`font-display text-3xl md:text-4xl font-bold text-center mb-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           About <span className="text-gradient">Me</span>
         </h2>
-        <p className={`text-center text-muted-foreground max-w-2xl mx-auto mb-16 ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "0.1s" }}>
-          Full Stack Developer with expertise in Java and React, passionate about building scalable and secure applications.
-        </p>
+        <div className="flex justify-center mb-6">
+          <div className="inline-block px-6 py-2.5 rounded-full bg-primary/10 text-primary text-base font-medium animate-fade-up">
+            Full Stack Developer with expertise in Java and React, passionate about building scalable and secure applications.
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Education */}
