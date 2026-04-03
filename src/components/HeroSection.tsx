@@ -29,12 +29,11 @@ export default function HeroSection() {
             <Mail size={18} /> Get in Touch
           </a>
           <a
-            href="https://linkedin.com/in/srilakshmi-t-m-bhat-a925a4197/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/SrilakshmiBhatResume.pdf"
+            download
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-secondary/80 transition-colors"
           >
-            <Linkedin size={18} /> LinkedIn
+            <Download size={18} /> Resume
           </a>
         </div>
 
