@@ -24,7 +24,7 @@ export default function ContactSection() {
             href="mailto:bhatsrilakshmi@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-hero text-primary-foreground font-medium hover:opacity-90 transition-opacity"
           >
-            <Mail size={18} /> bhatsrilakshmi@gmail.com
+            <Mail size={18} /> tmbhatsrilakshmi@gmail.com
           </a>
           <a
             href="https://linkedin.com/in/srilakshmi-t-m-bhat-a925a4197/"

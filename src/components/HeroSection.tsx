@@ -14,7 +14,7 @@ export default function HeroSection() {
           Full Stack Developer
         </div>
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-          Hi, I'm{" "}
+          Heyy! I'm{" "}
           <span className="text-gradient">Srilakshmi Bhat</span>
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>

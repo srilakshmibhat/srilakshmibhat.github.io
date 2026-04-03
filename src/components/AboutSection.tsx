@@ -25,13 +25,13 @@ export default function AboutSection() {
             </div>
             <div className="space-y-4">
               <div>
-                <p className="font-medium">M.Tech, Software Engineering</p>
-                <p className="text-sm text-muted-foreground">BITS Pilani • CGPA: 8.4</p>
+                <p className="font-medium">M.Tech, BITS Pilani</p>
+                <p className="text-sm text-muted-foreground">Software Engineering • CGPA: 8.4</p>
                 <p className="text-xs text-muted-foreground">Aug 2022 – Jul 2024</p>
               </div>
               <div>
-                <p className="font-medium">B.E, Computer Science and Engineering</p>
-                <p className="text-sm text-muted-foreground">Dayananda Sagar Academy of Technology • CGPA: 9.2</p>
+                <p className="font-medium">B.E, Dayananda Sagar Academy of Technology</p>
+                <p className="text-sm text-muted-foreground">Computer Science and Engineering • CGPA: 9.2</p>
                 <p className="text-xs text-muted-foreground">Jun 2018 – Jul 2022</p>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function AboutSection() {
             <div className="space-y-3">
               <div className="flex items-start gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                <p className="text-sm">Space School — NASA, Houston, Texas</p>
+                <p className="text-sm">Space School — NASA, Houston, Texas (Yes, I went to NASA xD)</p>
               </div>
               <div className="flex items-start gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
