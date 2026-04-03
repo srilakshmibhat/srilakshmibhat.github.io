@@ -5,7 +5,12 @@ export default function ContactSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30 transition-colors duration-300">
+    <section id="contact" className="relative py-24 bg-secondary/30 transition-colors duration-300 overflow-hidden">
+      {/* Background blobs matching hero */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl animate-float" />
+        <div className="absolute -top-40 -left-40 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
+      </div>
       <div className="container mx-auto px-6 text-center" ref={ref}>
         <h2 className={`font-display text-3xl md:text-4xl font-bold mb-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           Let's <span className="text-gradient">Connect</span>
