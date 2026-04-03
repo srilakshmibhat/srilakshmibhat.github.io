@@ -1,5 +1,4 @@
-import { ArrowDown, Mail, Linkedin, Github } from "lucide-react";
-import avatarWave from "@/assets/avatar-wave.png";
+import { ArrowDown, Mail, Linkedin, Download } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -14,18 +13,6 @@ export default function HeroSection() {
         <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium animate-fade-up">
           Full Stack Developer
         </div>
-
-        {/* Avatar */}
-        <div className="flex justify-center mb-6 animate-fade-up" style={{ animationDelay: "0.05s" }}>
-          <img
-            src={avatarWave}
-            alt="Srilakshmi Bhat avatar waving hello"
-            width={160}
-            height={160}
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/20 shadow-lg animate-wave-avatar"
-          />
-        </div>
-
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           Hi, I'm{" "}
           <span className="text-gradient">Srilakshmi Bhat</span>
@@ -42,12 +29,11 @@ export default function HeroSection() {
             <Mail size={18} /> Get in Touch
           </a>
           <a
-            href="https://linkedin.com/in/srilakshmi-t-m-bhat-a925a4197/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/SrilakshmiBhatResume.pdf"
+            download
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-secondary/80 transition-colors"
           >
-            <Linkedin size={18} /> LinkedIn
+            <Download size={18} /> Resume
           </a>
         </div>
 
