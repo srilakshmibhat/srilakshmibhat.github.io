@@ -11,7 +11,7 @@ export default function ContactSection() {
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl animate-float" />
         <div className="absolute -top-40 -left-40 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
       </div>
-      <div className="container mx-auto px-6 text-center" ref={ref}>
+      <div className="container mx-auto px-6 text-center relative z-10" ref={ref}>
         <h2 className={`font-display text-3xl md:text-4xl font-bold mb-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           Let's <span className="text-gradient">Connect</span>
         </h2>
