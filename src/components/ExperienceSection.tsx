@@ -1,18 +1,42 @@
 import { Building2, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const highlights = [
-  "Spearheaded scalable applications in SAP Datasphere (Business Data Cloud) using UI5 with TypeScript, Node.js and modern JavaScript frameworks.",
-  "Contributed to SAP Concur by working on the expense report module, handling bill/receipt upload functionality.",
-  "Architected a real-time onboarding monitoring platform using ReactJs and Java, supporting 5+ global datacenters.",
-  "Designed distributed data aggregation pipelines handling 10K+ records/day, reducing API latency by 30%.",
-  "Created and maintained RESTful APIs using Node.js, Nest.js and Java (Spring Boot) for microservices integration.",
-  "Implemented backend security features including HMAC signature, XSS protection, session hijacking, and geoblocking.",
-  "Setup real-time features using WebSockets improving data freshness and reducing polling overhead by 35%.",
-  "Integrated AI/ML capabilities with generative AI services, AI Core, AI Hub, GitHub Co-pilot and Joule.",
-  "Collaborated with cross-functional teams (CLM, CALM, Data Protection, SAP Concur, WalkMe) to deliver scalable features.",
-  "Improved system observability, reducing MTTR by ~20%.",
-  "Contributed to end-to-end feature ownership in agile — system design, threat modelling, code reviews & production deployments.",
+const teams = [
+  {
+    name: "SAP Datasphere (Business Data Cloud)",
+    highlights: [
+      "Spearheaded scalable applications using UI5 with Typescript, Node.js and modern JavaScript frameworks",
+      "Contributed to end-to-end feature ownership in an agile development environment, including system design discussions, threat modelling, code reviews and production deployments, consistently delivering high-quality, maintainable code.",
+    ],
+  },
+  {
+    name: "CLM (Cloud Lifecycle Management)",
+    highlights: [
+      "Setup real-time features using WebSockets improving data freshness and reducing polling overhead by 35%.",
+      "Created cron jobs for periodic data sync across microservices, improving data consistency and reducing manual intervention.",
+    ],
+  },
+  {
+    name: "CALM (Cloud Application Lifecycle Management)",
+    highlights: [
+      "Architected and formulated a real-time onboarding monitoring platform using ReactJs and Java, supporting 5+ global datacenters.",
+      "Designed distributed data aggregation pipelines handling 10K+ records/day, reducing API latency by 30%.",
+    ],
+  },
+  {
+    name: "SAP Concur",
+    highlights: [
+      "Contributed to SAP Concur by working on the expense report module, specifically handling bill/receipt upload functionality.",
+      "Created and maintained RESTful APIs using Node.js, Nest.js and Java (Spring Boot) for microservices integration.",
+    ],
+  },
+  {
+    name: "Enable Now",
+    highlights: [
+      "Implemented backend security features including HMAC signature, XSS protection, session hijacking, and geoblocking.",
+      "Integrated AI/ML capabilities by working with generative AI services, AI Core, AI Hub, GitHub Co-pilot and Joule, building APIs to enable intelligent automation and endpoints retrieving data-driven real-time insights and summaries.",
+    ],
+  },
 ];
 
 export default function ExperienceSection() {
@@ -44,11 +68,18 @@ export default function ExperienceSection() {
               </div>
             </div>
 
-            <div className="space-y-3 pl-4">
-              {highlights.map((item, i) => (
-                <div key={i} className="flex items-start gap-3 group">
-                  <ChevronRight size={16} className="text-primary mt-1 shrink-0 group-hover:translate-x-1 transition-transform" />
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{item}</p>
+            <div className="space-y-8 pl-4">
+              {teams.map((team, idx) => (
+                <div key={idx} className="space-y-3">
+                  <h4 className="font-display text-lg font-semibold text-primary">{team.name}</h4>
+                  <div className="space-y-2">
+                    {team.highlights.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3 group">
+                        <ChevronRight size={16} className="text-primary mt-1 shrink-0 group-hover:translate-x-1 transition-transform" />
+                        <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{item}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

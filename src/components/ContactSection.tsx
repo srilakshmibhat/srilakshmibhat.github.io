@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Mail, Linkedin, Instagram, Phone } from "lucide-react";
+import { Mail, Linkedin, Instagram, Github, Phone } from "lucide-react";
 
 export default function ContactSection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -41,6 +41,14 @@ export default function ContactSection() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card text-foreground font-medium card-elevated"
           >
             <Instagram size={18} /> Instagram
+          </a>
+          <a
+            href="http://github.com/srilakshmibhat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card text-foreground font-medium card-elevated"
+          >
+            <Github size={18} /> GitHub
           </a>
           <a
             href="tel:9916310298"
