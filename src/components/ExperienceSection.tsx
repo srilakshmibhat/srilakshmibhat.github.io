@@ -10,10 +10,10 @@ const teams = [
     ],
   },
   {
-    name: "CLM (Cloud Lifecycle Management)",
+    name: "Enable Now",
     highlights: [
-      "Setup real-time features using WebSockets improving data freshness and reducing polling overhead by 35%.",
-      "Created cron jobs for periodic data sync across microservices, improving data consistency and reducing manual intervention.",
+      "Implemented backend security features including HMAC signature, XSS protection, session hijacking, and geoblocking.",
+      "Integrated AI/ML capabilities by working with generative AI services, AI Core, AI Hub, GitHub Co-pilot and Joule, building APIs to enable intelligent automation and endpoints retrieving data-driven real-time insights and summaries.",
     ],
   },
   {
@@ -31,10 +31,10 @@ const teams = [
     ],
   },
   {
-    name: "Enable Now",
+    name: "CLM (Cloud Lifecycle Management)",
     highlights: [
-      "Implemented backend security features including HMAC signature, XSS protection, session hijacking, and geoblocking.",
-      "Integrated AI/ML capabilities by working with generative AI services, AI Core, AI Hub, GitHub Co-pilot and Joule, building APIs to enable intelligent automation and endpoints retrieving data-driven real-time insights and summaries.",
+      "Setup real-time features using WebSockets improving data freshness and reducing polling overhead by 35%.",
+      "Created cron jobs for periodic data sync across microservices, improving data consistency and reducing manual intervention.",
     ],
   },
 ];
