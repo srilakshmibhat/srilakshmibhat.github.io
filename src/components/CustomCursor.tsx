@@ -18,7 +18,7 @@ export default function CustomCursor() {
     if (!dot || !ring) return;
 
     let lastRippleTime = 0;
-    const rippleDelay = 30; // milliseconds between ripples
+    const rippleDelay = 20; // milliseconds between ripples
 
     const onMouseMove = (e: MouseEvent) => {
       dot.style.left = `${e.clientX}px`;
