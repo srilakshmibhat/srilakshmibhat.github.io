@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Monitor, HeartPulse, Tv } from "lucide-react";
+import { Monitor, HeartPulse, Tv, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const projects = [
@@ -9,6 +9,14 @@ const projects = [
     tech: ["Node.js", "Express", "Java", "UI5"],
     description:
       "End-to-end dashboard to monitor real-time onboarding status across multiple datacenters. Designed system architecture, backend APIs, UI, and data aggregation logic.",
+    github: null,
+  },
+  {
+    icon: Sparkles,
+    title: "AI-Based Candidate Verification",
+    tech: ["Python", "Machine Learning", "FastAPI"],
+    description:
+      "AI-powered system for automated candidate verification using facial recognition, document validation, and behavioral analysis to ensure authenticity during remote assessments.",
     github: null,
   },
   {
@@ -53,7 +61,7 @@ export default function ProjectsSection() {
           Some of the impactful projects I've built. Click to go to the GitHub repository.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {projects.map((proj, i) => {
             const Icon = proj.icon;
             return (
