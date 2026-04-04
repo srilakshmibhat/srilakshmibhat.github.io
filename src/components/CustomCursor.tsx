@@ -1,19 +1,47 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+interface Ripple {
+  x: number;
+  y: number;
+  id: number;
+}
 
 export default function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
+  const [ripples, setRipples] = useState<Ripple[]>([]);
+  const rippleIdRef = useRef(0);
 
   useEffect(() => {
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
 
+    let lastRippleTime = 0;
+    const rippleDelay = 30; // milliseconds between ripples
+
     const onMouseMove = (e: MouseEvent) => {
       dot.style.left = `${e.clientX}px`;
       dot.style.top = `${e.clientY}px`;
       ring.style.left = `${e.clientX}px`;
       ring.style.top = `${e.clientY}px`;
+
+      // Create ripple effect on movement
+      const now = Date.now();
+      if (now - lastRippleTime > rippleDelay) {
+        const newRipple: Ripple = {
+          x: e.clientX,
+          y: e.clientY,
+          id: rippleIdRef.current++,
+        };
+        setRipples((prev) => [...prev, newRipple]);
+        lastRippleTime = now;
+
+        // Remove ripple after animation
+        setTimeout(() => {
+          setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));
+        }, 800);
+      }
     };
 
     const onMouseOver = (e: MouseEvent) => {
@@ -65,6 +93,16 @@ export default function CustomCursor() {
     <>
       <div ref={dotRef} className="cursor-dot hidden md:block" />
       <div ref={ringRef} className="cursor-ring hidden md:block" />
+      {ripples.map((ripple) => (
+        <div
+          key={ripple.id}
+          className="ripple-effect"
+          style={{
+            left: ripple.x,
+            top: ripple.y,
+          }}
+        />
+      ))}
     </>
   );
 }

@@ -36,23 +36,79 @@ export default function Navbar({ isDark, toggle }: NavbarProps) {
               {l.label}
             </a>
           ))}
-          <button
-            onClick={toggle}
-            className="p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-            aria-label="Toggle theme"
-          >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+          {/* Toggle Switch */}
+          <div className="flex items-center gap-2 bg-secondary rounded-full p-1">
+            <button
+              onClick={toggle}
+              className="relative w-16 h-8 rounded-full transition-colors duration-300"
+              style={{
+                background: isDark ? 'hsl(var(--muted))' : 'hsl(var(--primary))',
+              }}
+              aria-label="Toggle theme"
+            >
+              <span
+                className="absolute top-1 left-1 w-6 h-6 bg-background rounded-full shadow-md transition-transform duration-300 flex items-center justify-center"
+                style={{
+                  transform: isDark ? 'translateX(0)' : 'translateX(32px)',
+                }}
+              >
+                {isDark ? (
+                  <Moon size={14} className="text-muted-foreground" />
+                ) : (
+                  <Sun size={14} className="text-primary" />
+                )}
+              </span>
+              <div className="absolute inset-0 flex items-center justify-between px-2">
+                <Moon
+                  size={14}
+                  className={`transition-opacity ${isDark ? 'opacity-60' : 'opacity-30'}`}
+                  style={{ color: isDark ? 'hsl(var(--muted-foreground))' : 'hsl(var(--primary-foreground))' }}
+                />
+                <Sun
+                  size={14}
+                  className={`transition-opacity ${isDark ? 'opacity-30' : 'opacity-60'}`}
+                  style={{ color: isDark ? 'hsl(var(--muted-foreground))' : 'hsl(var(--primary-foreground))' }}
+                />
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Mobile */}
         <div className="flex md:hidden items-center gap-2">
+          {/* Mobile Toggle Switch */}
           <button
             onClick={toggle}
-            className="p-2 rounded-lg bg-secondary text-secondary-foreground"
+            className="relative w-14 h-7 rounded-full transition-colors duration-300"
+            style={{
+              background: isDark ? 'hsl(var(--muted))' : 'hsl(var(--primary))',
+            }}
             aria-label="Toggle theme"
           >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            <span
+              className="absolute top-0.5 left-0.5 w-6 h-6 bg-background rounded-full shadow-md transition-transform duration-300 flex items-center justify-center"
+              style={{
+                transform: isDark ? 'translateX(0)' : 'translateX(28px)',
+              }}
+            >
+              {isDark ? (
+                <Moon size={12} className="text-muted-foreground" />
+              ) : (
+                <Sun size={12} className="text-primary" />
+              )}
+            </span>
+            <div className="absolute inset-0 flex items-center justify-between px-1.5">
+              <Moon
+                size={12}
+                className={`transition-opacity ${isDark ? 'opacity-60' : 'opacity-30'}`}
+                style={{ color: isDark ? 'hsl(var(--muted-foreground))' : 'hsl(var(--primary-foreground))' }}
+              />
+              <Sun
+                size={12}
+                className={`transition-opacity ${isDark ? 'opacity-30' : 'opacity-60'}`}
+                style={{ color: isDark ? 'hsl(var(--muted-foreground))' : 'hsl(var(--primary-foreground))' }}
+              />
+            </div>
           </button>
           <button onClick={() => setOpen(!open)} className="p-2 text-foreground" aria-label="Menu">
             {open ? <X size={22} /> : <Menu size={22} />}

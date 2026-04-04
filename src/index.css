@@ -169,3 +169,28 @@
   height: 52px;
   border-color: hsl(var(--accent) / 0.6);
 }
+
+/* Ripple effect */
+.ripple-effect {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsl(var(--primary) / 0.4), hsl(var(--accent) / 0.3), hsl(var(--primary) / 0.1), transparent);
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 1.5s ease-out forwards;
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
