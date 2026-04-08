@@ -37,7 +37,7 @@ export default function Navbar({ isDark, toggle }: NavbarProps) {
             </a>
           ))}
           {/* Toggle Switch */}
-          <div className="flex items-center gap-2 bg-secondary rounded-full p-1">
+          <div className="flex items-center gap-2">
             <button
               onClick={toggle}
               className="relative w-16 h-8 rounded-full transition-colors duration-300"
@@ -47,9 +47,9 @@ export default function Navbar({ isDark, toggle }: NavbarProps) {
               aria-label="Toggle theme"
             >
               <span
-                className="absolute top-1 left-1 w-6 h-6 bg-background rounded-full shadow-md transition-transform duration-300 flex items-center justify-center"
+                className="absolute top-1 w-6 h-6 bg-background rounded-full shadow-md transition-all duration-300 flex items-center justify-center"
                 style={{
-                  transform: isDark ? 'translateX(0)' : 'translateX(32px)',
+                  left: isDark ? '4px' : 'calc(100% - 29px)',
                 }}
               >
                 {isDark ? (
@@ -58,7 +58,7 @@ export default function Navbar({ isDark, toggle }: NavbarProps) {
                   <Sun size={14} className="text-primary" />
                 )}
               </span>
-              <div className="absolute inset-0 flex items-center justify-between px-2">
+              <div className="absolute inset-0 flex items-center justify-between px-2.5">
                 <Moon
                   size={14}
                   className={`transition-opacity ${isDark ? 'opacity-60' : 'opacity-30'}`}
@@ -86,9 +86,9 @@ export default function Navbar({ isDark, toggle }: NavbarProps) {
             aria-label="Toggle theme"
           >
             <span
-              className="absolute top-0.5 left-0.5 w-6 h-6 bg-background rounded-full shadow-md transition-transform duration-300 flex items-center justify-center"
+              className="absolute top-0.5 w-6 h-6 bg-background rounded-full shadow-md transition-all duration-300 flex items-center justify-center"
               style={{
-                transform: isDark ? 'translateX(0)' : 'translateX(28px)',
+                left: isDark ? '2px' : 'calc(100% - 26px)',
               }}
             >
               {isDark ? (
@@ -97,7 +97,7 @@ export default function Navbar({ isDark, toggle }: NavbarProps) {
                 <Sun size={12} className="text-primary" />
               )}
             </span>
-            <div className="absolute inset-0 flex items-center justify-between px-1.5">
+            <div className="absolute inset-0 flex items-center justify-between px-2">
               <Moon
                 size={12}
                 className={`transition-opacity ${isDark ? 'opacity-60' : 'opacity-30'}`}
